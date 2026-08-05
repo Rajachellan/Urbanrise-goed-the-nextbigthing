@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Colors</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="output">Loading...</div>
+    <script>
+        const img = new Image();
+        img.src = '../assets/images/brandlogo.webp';
+        img.onload = () => {
+            const canvas = document.getElementById('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            const data = ctx.getImageData(0, 0, img.width, img.height).data;
+            const colorCounts = {};
+            for (let i = 0; i < data.length; i += 4) {
+                const r = data[i];
+                const g = data[i+1];
+                const b = data[i+2];
+                const a = data[i+3];
+                // Ignore transparent or white/near white pixels
+                if (a > 100 && !(r > 240 && g > 240 && b > 240)) {
+                    // Group similar colors slightly
+                    const rG = Math.round(r / 5) * 5;
+                    const gG = Math.round(g / 5) * 5;
+                    const bG = Math.round(b / 5) * 5;
+                    const hex = '#' + ((1 << 24) + (rG << 16) + (gG << 8) + bG).toString(16).slice(1);
+                    colorCounts[hex] = (colorCounts[hex] || 0) + 1;
+                }
+            }
+            const sorted = Object.entries(colorCounts).sort((a, b) => b[1] - a[1]);
+            document.getElementById('output').innerHTML = '<pre>' + JSON.stringify(sorted.slice(0, 30), null, 2) + '</pre>';
+        };
+    </script>
+</body>
+</html>

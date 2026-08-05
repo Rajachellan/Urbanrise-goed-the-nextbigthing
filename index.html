@@ -17,7 +17,7 @@
     <title>Urbanrise Codename THE NEXT BIG THING | 2 &amp; 3 BHK in Thirumazhisai</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/icons/header-logo.svg">
+    <link rel="icon" type="image/webp" href="assets/images/brandlogo.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://goedproperties.in/">
@@ -34,7 +34,8 @@
     <meta property="og:url" content="https://goedproperties.in/">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter
+    :card" content="summary_large_image">
     <meta name="twitter:title" content="Urbanrise Codename THE NEXT BIG THING | 2 &amp; 3 BHK in Thirumazhisai">
     <meta name="twitter:description" content="Upcoming mid-luxury 2 &amp; 3 BHK apartments by Urbanrise in Thirumazhisai. 11.89 acres, 100+ amenities, EOI from ₹65–95 Lakhs.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&h=630&q=80">
@@ -78,8 +79,12 @@
         theme: {
           extend: {
             colors: {
-              brandRed: '#C8102E',
-              brandRedDark: '#A30B22',
+              brandPrimary: '#186635',
+              brandLight: '#94BB44',
+              brandBlue: '#408ECC',
+              brandSky: '#57BDEB',
+              brandRed: '#186635',
+              brandRedDark: '#408ECC',
               luxuryDark: '#111827',
               luxurySlate: '#F8FAFC',
               luxuryGray: '#64748B',
@@ -1644,7 +1649,7 @@
                     const href = link.getAttribute("href") || "";
                     const isActive = href === "#" + id;
                     link.classList.toggle("active", isActive);
-                    link.classList.toggle("text-brandRed", isActive);
+                    link.classList.toggle("text-brandSky", isActive);
                 });
             };
 
@@ -1763,8 +1768,8 @@
     <!-- =========================
     HEADER / NAVIGATION
     ========================= -->
-    <header id="siteHeader" class="fixed top-0 left-0 z-50 w-full bg-white/95 backdrop-blur-xl shadow-sm border-b border-luxuryBorder">
-        <div class="h-[4px] w-full bg-brandRed/10"></div>
+    <header id="siteHeader" class="fixed top-0 left-0 z-50 w-full bg-[#186635]/95 text-white backdrop-blur-xl shadow-sm border-b border-[#94BB44]/40">
+        <div class="h-[4px] w-full bg-gradient-to-r from-brandPrimary via-brandLight to-brandSky"></div>
     
         <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
         <div class="flex items-center justify-between h-[82px]">
@@ -1772,7 +1777,7 @@
             <!-- Logo -->
             <a href="#home" class="flex items-center gap-3">
             <img 
-                src="assets/images/icons/header-logo.svg" 
+                src="assets/images/brandlogo.webp" 
                 alt="Goed Properties Logo" 
                 class="w-[92px] sm:w-[105px] h-auto"
             >
@@ -1780,18 +1785,18 @@
     
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex items-center gap-10 text-[13px] font-bold tracking-[0.12em] uppercase">
-                <a href="#overview" class="nav-link hover:text-brandRed transition">Overview</a>
-                <a href="#floor-plans" class="nav-link hover:text-brandRed transition">EOI Pricing</a>
-                <a href="#amenities" class="nav-link hover:text-brandRed transition">Amenities</a>
-                <a href="#location" class="nav-link hover:text-brandRed transition">Location</a>
-                <a href="#contact" class="nav-link hover:text-brandRed transition">Contact</a>
+                <a href="#overview" class="nav-link hover:text-brandLight transition">Overview</a>
+                <a href="#floor-plans" class="nav-link hover:text-brandLight transition">EOI Pricing</a>
+                <a href="#amenities" class="nav-link hover:text-brandLight transition">Amenities</a>
+                <a href="#location" class="nav-link hover:text-brandLight transition">Location</a>
+                <a href="#contact" class="nav-link hover:text-brandLight transition">Contact</a>
             </nav>
     
             <!-- Desktop CTA -->
             <div class="hidden lg:flex items-center gap-4">
             <a 
                 href="tel:+919344214839" 
-                class="w-12 h-12 rounded-full bg-brandRed/10 text-brandRed flex items-center justify-center hover:bg-brandRed hover:text-white transition"
+                class="w-12 h-12 rounded-full bg-white/15 text-white flex items-center justify-center hover:bg-brandLight hover:text-[#186635] transition"
                 aria-label="Call Goed Properties"
             >
                 <i class="fa-solid fa-phone"></i>
@@ -1800,7 +1805,7 @@
             <a 
                 href="#"
                 data-modal-title="Book a Site Visit"
-                class="js-open-lead-modal inline-flex items-center justify-center rounded-full bg-brandRed px-8 py-4 text-white text-[13px] font-bold tracking-[0.12em] uppercase shadow-lg shadow-brandRed/20 hover:bg-brandRedDark transition"
+                class="js-open-lead-modal inline-flex items-center justify-center rounded-full bg-brandBlue px-8 py-4 text-white text-[13px] font-bold tracking-[0.12em] uppercase shadow-lg shadow-black/15 hover:bg-brandSky transition"
             >
                 Book Site Visit
             </a>
@@ -1810,13 +1815,13 @@
             <div class="flex lg:hidden items-center">
             <button 
                 id="mobileMenuBtn" 
-                class="w-11 h-11 flex items-center justify-center text-luxuryDark"
+                class="w-11 h-11 flex items-center justify-center text-white"
                 aria-label="Open mobile menu"
             >
                 <span class="relative w-7 h-5 block">
-                <span class="menu-line absolute left-0 top-0 w-full h-[2.5px] rounded-full bg-luxuryDark transition"></span>
-                <span class="menu-line absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2.5px] rounded-full bg-luxuryDark transition"></span>
-                <span class="menu-line absolute left-0 bottom-0 w-full h-[2.5px] rounded-full bg-luxuryDark transition"></span>
+                <span class="menu-line absolute left-0 top-0 w-full h-[2.5px] rounded-full bg-white transition"></span>
+                <span class="menu-line absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2.5px] rounded-full bg-white transition"></span>
+                <span class="menu-line absolute left-0 bottom-0 w-full h-[2.5px] rounded-full bg-white transition"></span>
                 </span>
             </button>
             </div>

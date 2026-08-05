@@ -12,7 +12,7 @@
 .hover-lift:hover {
     transform: translateY(-10px);
     box-shadow: 0 30px 60px -15px rgba(17, 24, 39, 0.1);
-    border-color: rgba(201, 162, 39, 0.4) !important;
+    border-color: rgba(148, 187, 68, 0.4) !important;
 }
 
 /* Luxury Gold Shine Sweep Effect on Hover */
@@ -68,8 +68,8 @@
 }
 
 .loader-ring {
-    border: 3px solid rgba(200, 16, 46, 0.1);
-    border-top: 3px solid #C8102E; /* Brand Red */
+    border: 3px solid rgba(87, 189, 235, 0.18);
+    border-top: 3px solid #186635;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -79,13 +79,13 @@
 /* Timeline Pulse Indicator */
 @keyframes timelinePulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.4);
+        box-shadow: 0 0 0 0 rgba(64, 142, 204, 0.4);
     }
     70% {
-        box-shadow: 0 0 0 10px rgba(200, 16, 46, 0);
+        box-shadow: 0 0 0 10px rgba(64, 142, 204, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(200, 16, 46, 0);
+        box-shadow: 0 0 0 0 rgba(64, 142, 204, 0);
     }
 }
 
@@ -123,21 +123,21 @@
 }
 
 .journey-card:hover, .journey-card-active {
-    border-color: rgba(200, 16, 46, 0.6) !important; /* Brand Red */
-    box-shadow: 0 15px 35px -10px rgba(200, 16, 46, 0.2);
+    border-color: rgba(148, 187, 68, 0.6) !important;
+    box-shadow: 0 15px 35px -10px rgba(24, 102, 53, 0.2);
     background-color: rgba(255, 255, 255, 0.95) !important;
     transform: translateY(-6px);
 }
 
 .journey-card:hover .journey-number, .journey-card-active .journey-number {
-    color: #C8102E !important; /* Brand Red */
+    color: #186635 !important;
     transform: scale(1.1);
 }
 
 /* Timeline Dot Scroll Link Animation */
 .timeline-dot-scroll-active {
-    background-color: #C8102E !important; /* Brand Red */
-    border-color: #C8102E !important;
-    box-shadow: 0 0 12px 4px rgba(200, 16, 46, 0.4);
+    background-color: #408ECC !important;
+    border-color: #57BDEB !important;
+    box-shadow: 0 0 12px 4px rgba(64, 142, 204, 0.4);
     animation: timelinePulse 2s infinite;
 }
