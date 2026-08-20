@@ -149,8 +149,8 @@ function setupFooterNewsletter() {
         e.preventDefault();
         const input = form.querySelector("input[type='email']");
         if (input && input.value.trim() !== "") {
-            alert(`Thank you for subscribing! Exquisite updates will be sent to ${input.value}.`);
             input.value = "";
+            window.location.href = "thankyou.html";
         }
     });
 }

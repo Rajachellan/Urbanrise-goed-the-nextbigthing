@@ -1541,7 +1541,8 @@
                             if (f._syncDateField) f._syncDateField();
                         });
                         if (typeof options.onSuccess === "function") options.onSuccess();
-                    }, resetDelay);
+                        window.location.href = "thankyou.html";
+                    }, options.resetDelay || 1200);
                 } catch (err) {
                     console.error("Lead submit failed:", err);
                     button.innerHTML = "Something went wrong — Try again";
